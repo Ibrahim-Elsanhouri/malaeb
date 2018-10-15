@@ -1,0 +1,197 @@
+/* Start Media Qurey */
+
+/* Smart phones and tablets */
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav > li > a {
+        color: #000
+    }
+
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border-color: transparent;
+    }
+    .navbar-inverse .navbar-toggle:hover {
+        background-color: #0c920e;
+    }
+    .navbar-inverse .navbar-toggle {
+        border-color: #000
+    }
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: #000
+    }
+
+    .slinks {
+        display: none
+    }
+
+    .register {
+        width: 80%
+    }
+
+    .green {
+        min-height: 350px;
+        padding: 40px 0
+    }
+    .green .subscribe h3 {
+        font-size: 16px;
+        padding-top: 20px
+    }
+
+    .green .subscribe h3.search {
+        font-size: 10px
+    }
+    .green .input-group {
+        margin: 0 auto;
+    }
+    .data h1 {
+        font-size: 22px
+    }
+    .data p.lead {
+        font-size: 12px
+    }
+    .reasons p {
+        font-size: 22px
+    }
+
+    .rect {
+        min-height: 150px
+    }
+
+    .static p {
+        margin-bottom: 20px
+    }
+    .rect h1 {
+        font-size: 22px
+    }
+    .rect .visitor {
+        margin-top: 50px
+    }
+    .contact-us {
+        min-height: 1300px;
+    }
+    .middleFooter {
+        text-align: center;
+    }
+    .socials ul {
+        float: none;
+    }
+    .socials li,
+    .agreement li,
+    .footerMenu li {
+        float: none;
+        text-align: center;
+        display: inline;
+    }
+    .footerMenu ul,
+    .social ul {
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+        display: block;
+
+    }
+    .social {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+    }
+    .social ul {
+        margin: 0 auto;
+        float: none;
+        display: block;
+
+    }
+    .mal3ab {
+        margin-bottom: 30px;
+        height: auto;
+
+    }
+    ul.socials {
+        float: none;
+    }
+    .logo {
+        max-height: 70px;
+        width: auto;
+    }
+    .navbar-default {
+        height: 100px;
+    }
+}
+
+/*extra small screens*/
+
+@media (max-width: 767px) {
+
+    .mala3eb {
+        min-height: 1400px;
+    }
+    .data .button {
+        width: 150px;
+
+    }
+    .carousel-control.right {
+        right: 30%;
+
+    }
+    .carousel-control.left {
+        left: 30%;
+    }
+    ul.social {
+        padding-right: 0;
+
+    }
+
+}
+
+/* Small Screen */
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .green {
+        min-height: 350px;
+    }
+    .green .input-group {
+        margin: 0 auto;
+    }
+    .contact-us {
+        min-height: 1500px;
+    }
+    .mal3ab {
+        margin-bottom: 30px;
+
+    }
+
+    .navbar-default {
+        height: 145px;
+    }
+    .register {
+        margin-top: 40px;
+    }
+    .mala3eb {
+        min-height: 1500px;
+    }
+    .slinks{
+        float: right;
+    }
+
+}
+
+/* Medium Screen */
+
+@media (min-width: 991px) and (max-width: 1199px) {
+
+    .register {
+        margin-top: 30px;
+    }
+
+
+
+
+}
+
+/* Large Screen */
+
+@media (min-width: 1200px) {}
+
+/*end media query*/

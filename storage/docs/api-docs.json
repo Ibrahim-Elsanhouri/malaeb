@@ -1,0 +1,3893 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "ElMalaeb APIs",
+        "version": "1.0.0"
+    },
+    "basePath": "/api",
+    "paths": {
+        "/articles": {
+            "get": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Get a listing of the articles.",
+                "description": "Get all articles",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/articles"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Store a newly created articles in storage",
+                "description": "Store articles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "articles that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/articles"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/articles"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/{id}": {
+            "get": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Display the specified articles",
+                "description": "Get articles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of articles",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/articles"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Update the specified articles in storage",
+                "description": "Update articles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of articles",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "articles that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/articles"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/articles"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "articles"
+                ],
+                "summary": "Remove the specified articles from storage",
+                "description": "Delete articles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of articles",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/cities": {
+            "get": {
+                "tags": [
+                    "cities"
+                ],
+                "summary": "Get a listing of the cities.",
+                "description": "Get all cities",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/cities"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/cities/{id}": {
+            "get": {
+                "tags": [
+                    "cities"
+                ],
+                "summary": "Display the specified city",
+                "description": "Get city",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of playgrounds",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/cities/"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "fcm": {
+            "post": {
+                "tags": [
+                    "FCM service"
+                ],
+                "summary": "Add device token to a user",
+                "description": "Add device token to a user",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "body",
+                        "description": "The user id to add his device token",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/fcmAPIservice"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Token has been updated successfully",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/fcmAPIservice"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/fcmAPIservices/{id}": {
+            "get": {
+                "tags": [
+                    "FCM service"
+                ],
+                "summary": "Test fcmAPIservice",
+                "description": "Test fcmAPIservice",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of fcmAPIservice",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/fcmAPIservice"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "FCM service"
+                ],
+                "summary": "Update the specified fcmAPIservice in storage",
+                "description": "Update fcmAPIservice",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of fcmAPIservice",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "fcmAPIservice that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/fcmAPIservice"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/fcmAPIservice"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "FCM service"
+                ],
+                "summary": "Remove the specified fcmAPIservice from storage",
+                "description": "Delete fcmAPIservice",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of fcmAPIservice",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/homedatas": {
+            "get": {
+                "tags": [
+                    "homedata"
+                ],
+                "summary": "AAAGet a listing of the homedatas.",
+                "description": "Get all homedatas",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/homedata"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/owners/playgrounds": {
+            "get": {
+                "tags": [
+                    "owners"
+                ],
+                "summary": "List PG times for an owner",
+                "description": "retrieve  PG times for an owner",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/owners/pgtimes": {
+            "get": {
+                "tags": [
+                    "owners"
+                ],
+                "summary": "Display the owner's specified playgrounds",
+                "description": "Display the owner's specified playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "user ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pg_id",
+                        "in": "query",
+                        "description": "playground ID",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/users"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/owners/report": {
+            "get": {
+                "tags": [
+                    "owners"
+                ],
+                "summary": "Revertive payments report",
+                "description": "Revertive payments report",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pg_news": {
+            "get": {
+                "tags": [
+                    "pg_news"
+                ],
+                "summary": "Get a listing of the pg_news.",
+                "description": "Get all pg_news",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/pg_news"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pg_news"
+                ],
+                "summary": "Store a newly created pg_news in storage",
+                "description": "Store pg_news",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pg_news that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pg_news"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pg_news"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pg_news/{id}": {
+            "get": {
+                "tags": [
+                    "pg_news"
+                ],
+                "summary": "Display the specified pg_news",
+                "description": "Get pg_news",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pg_news",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pg_news"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pg_news"
+                ],
+                "summary": "Update the specified pg_news in storage",
+                "description": "Update pg_news",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pg_news",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pg_news that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pg_news"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pg_news"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pg_news"
+                ],
+                "summary": "Remove the specified pg_news from storage",
+                "description": "Delete pg_news",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pg_news",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pgimages": {
+            "get": {
+                "tags": [
+                    "pgimages"
+                ],
+                "summary": "Get a listing of the pgimages.",
+                "description": "Get all pgimages",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/pgimages"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pgimages"
+                ],
+                "summary": "Store a newly created pgimages in storage",
+                "description": "Store pgimages",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pgimages that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pgimages"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgimages"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pgimages/{id}": {
+            "get": {
+                "tags": [
+                    "pgimages"
+                ],
+                "summary": "Display the specified pgimages",
+                "description": "Get pgimages",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgimages",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgimages"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pgimages"
+                ],
+                "summary": "Update the specified pgimages in storage",
+                "description": "Update pgimages",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgimages",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pgimages that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pgimages"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgimages"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pgimages"
+                ],
+                "summary": "Remove the specified pgimages from storage",
+                "description": "Delete pgimages",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgimages",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pgtimes": {
+            "get": {
+                "tags": [
+                    "pgtimes"
+                ],
+                "summary": "Get a listing of the pgtimes.",
+                "description": "Get all pgtimes",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/pgtimes"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pgtimes"
+                ],
+                "summary": "Store a newly created pgtimes in storage",
+                "description": "Store pgtimes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pgtimes that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pgtimes"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgtimes"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/pgtimes/{id}": {
+            "get": {
+                "tags": [
+                    "pgtimes"
+                ],
+                "summary": "Display the specified pgtimes",
+                "description": "Get pgtimes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgtimes",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgtimes"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pgtimes"
+                ],
+                "summary": "Update the specified pgtimes in storage",
+                "description": "Update pgtimes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgtimes",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "pgtimes that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/pgtimes"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/pgtimes"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pgtimes"
+                ],
+                "summary": "Remove the specified pgtimes from storage",
+                "description": "Delete pgtimes",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of pgtimes",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/playgrounds": {
+            "get": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Get a listing of the playgrounds.",
+                "description": "Get all playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/playgrounds"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Store a newly created playgrounds in storage",
+                "description": "Store playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "playgrounds that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/playgrounds"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/playgrounds"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/playgrounds/{id}": {
+            "get": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Display the specified playgrounds",
+                "description": "Get playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of playgrounds",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/playgrounds"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Update the specified playgrounds in storage",
+                "description": "Update playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of playgrounds",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "playgrounds that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/playgrounds"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/playgrounds"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Remove the specified playgrounds from storage",
+                "description": "Delete playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of playgrounds",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/playgrounds/rating": {
+            "post": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Make rating for  a playground.",
+                "description": "Make rating for  a playground",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id ",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/playgrounds"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/playgrounds/nearby": {
+            "get": {
+                "tags": [
+                    "playgrounds"
+                ],
+                "summary": "Get nearby playgrounds",
+                "description": "Get nearby playgrounds",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/prizes": {
+            "get": {
+                "tags": [
+                    "prizes"
+                ],
+                "summary": "Get a listing of the prizes.",
+                "description": "Get all prizes",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/prizes"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations": {
+            "get": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Get a listing of the reservations.",
+                "description": "Get all reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/reservations"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Store a newly created reservations in storage",
+                "description": "Store reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "reservations that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/reservations"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations/{id}": {
+            "get": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Display the  reservations by playground",
+                "description": "Get reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of reservations",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Update the specified reservations in storage",
+                "description": "Update reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of reservations",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "reservations that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/reservations"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Remove the specified reservations from storage",
+                "description": "Delete reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of reservations",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations_by_player/{id}": {
+            "get": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Display the  reservations by player",
+                "description": "Get reservations",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of reservations",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations/attendance": {
+            "post": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Set attendance for player on pg time for playground",
+                "description": "Set attendance for player on pg time for playground",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "reservations that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/reservations"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations/confirm": {
+            "post": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Set confirm for player on pg time for playground",
+                "description": "Set confirm for player on pg time for playground",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "reservations that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/reservations"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations/"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/reservations/cancel": {
+            "post": {
+                "tags": [
+                    "reservations"
+                ],
+                "summary": "Cancel reservation",
+                "description": "Cancel reservation",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "reservations that should be cancel",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/reservations/"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/reservations/"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/search": {
+            "get": {
+                "tags": [
+                    "search"
+                ],
+                "summary": "Get playgrounds as search results.",
+                "description": "Get playgrounds as search results",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/search"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/settings": {
+            "get": {
+                "tags": [
+                    "settings"
+                ],
+                "summary": "Get a listing of the settings.",
+                "description": "Get all settings",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/settings"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "settings"
+                ],
+                "summary": "Store a newly created settings in storage",
+                "description": "Store settings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "settings that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/settings"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/settings"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/settings/{id}": {
+            "get": {
+                "tags": [
+                    "settings"
+                ],
+                "summary": "Display the specified settings",
+                "description": "Get settings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of settings",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/settings"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "settings"
+                ],
+                "summary": "Update the specified settings in storage",
+                "description": "Update settings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of settings",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "settings that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/settings"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/settings"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "settings"
+                ],
+                "summary": "Remove the specified settings from storage",
+                "description": "Delete settings",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of settings",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/statistics": {
+            "get": {
+                "tags": [
+                    "statistics"
+                ],
+                "summary": "Get a listing of the statistics.",
+                "description": "Get all statistics",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/statistics"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "statistics"
+                ],
+                "summary": "Store a newly created statistics in storage",
+                "description": "Store statistics",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "statistics that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/statistics"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/statistics"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/statistics/{id}": {
+            "get": {
+                "tags": [
+                    "statistics"
+                ],
+                "summary": "Display the specified statistics",
+                "description": "Get statistics",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of statistics",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/statistics"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "statistics"
+                ],
+                "summary": "Update the specified statistics in storage",
+                "description": "Update statistics",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of statistics",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "statistics that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/statistics"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/statistics"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "statistics"
+                ],
+                "summary": "Remove the specified statistics from storage",
+                "description": "Delete statistics",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of statistics",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/teams": {
+            "get": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Get a listing of the teams.",
+                "description": "Get all teams",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/teams"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Store a newly created teams in storage",
+                "description": "Store teams",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "teams that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/teams"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/teams"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/teams/{id}": {
+            "get": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Display the specified teams",
+                "description": "Get teams",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of teams",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/teams"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Update the specified teams in storage",
+                "description": "Update teams",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of teams",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "teams that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/teams"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/teams"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Remove the specified teams from storage",
+                "description": "Delete teams",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of teams",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get a listing of the users.",
+                "description": "Get all users",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/users"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Store a newly created users in storage",
+                "description": "Store users",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "users that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/users"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/login": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "login user",
+                "description": "you need to provide mobile||email||password",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "users that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/users"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Display the specified users",
+                "description": "Get users",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of users",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/users"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Update the specified users in storage",
+                "description": "Update users",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of users",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "users that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/users"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Remove the specified users from storage",
+                "description": "Delete users",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of users",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/confirm": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Confirm user registration",
+                "description": "Confirm user registration",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id and confirmation code",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/confirm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/logout": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "user logout",
+                "description": "user logout",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id ",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/logout"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/resend-code": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Resend confirmation code.",
+                "description": "Resend confirmation code.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id and test ( test will removed in production",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/resend-code"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/forget-password": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Resend confirmation code.",
+                "description": "Resend confirmation code.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "valid user mobile number and test ( test will removed in production",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/forget-password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/fb-login": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Facebook login service.",
+                "description": "Facebook login service.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user email and mobile number",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/fb-login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/profile": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Update user profile.",
+                "description": "Update user profile.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/profile"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}/playgrounds/": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Booked playground by user",
+                "description": "retrieve booked playground by user",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/profile"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/change-password": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Resend confirmation code.",
+                "description": "Resend confirmation code.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "valid user mobile number and test ( test will removed in production",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/change-password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/points": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Update user points.",
+                "description": "Update user points.",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/points"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "contact-us": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "articles": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "category_id": {
+                    "description": "category_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "title": {
+                    "description": "title",
+                    "type": "string"
+                },
+                "slug": {
+                    "description": "slug",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "content",
+                    "type": "string"
+                },
+                "image": {
+                    "description": "image",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "string"
+                },
+                "date": {
+                    "description": "date",
+                    "type": "string",
+                    "format": "date"
+                },
+                "featured": {
+                    "description": "featured",
+                    "type": "boolean"
+                }
+            }
+        },
+        "cities": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "fcmAPIservice": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "homedata": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "playgrounds": {
+                    "description": "list of playgrounds",
+                    "type": "array",
+                    "format": "string",
+                    "items": {
+                        "$ref": "#/definitions/playgrounds"
+                    }
+                },
+                "images": {
+                    "description": "list of playgrounds",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/pgimages"
+                    }
+                },
+                "statistics": {
+                    "description": "list of statistics",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/statistics"
+                    }
+                }
+            }
+        },
+        "pg_news": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pg_id": {
+                    "description": "pg_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "title": {
+                    "description": "title",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "content",
+                    "type": "string"
+                }
+            }
+        },
+        "pgimages": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pg_id": {
+                    "description": "pg_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "image": {
+                    "description": "image",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "url",
+                    "type": "string"
+                }
+            }
+        },
+        "pgtimes": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pg_id": {
+                    "description": "pg_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "time": {
+                    "description": "time",
+                    "type": "string"
+                },
+                "am_pm": {
+                    "description": "am_pm",
+                    "type": "string"
+                }
+            }
+        },
+        "playgrounds": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pg_name": {
+                    "description": "pg_name",
+                    "type": "string"
+                },
+                "address": {
+                    "description": "address",
+                    "type": "string"
+                },
+                "map_lon": {
+                    "description": "map_lon",
+                    "type": "number",
+                    "format": "float"
+                },
+                "map_lat": {
+                    "description": "map_lat",
+                    "type": "number",
+                    "format": "float"
+                },
+                "price": {
+                    "description": "price",
+                    "type": "number",
+                    "format": "float"
+                },
+                "featured": {
+                    "description": "featured",
+                    "type": "boolean"
+                },
+                "ground_type": {
+                    "description": "ground_type",
+                    "type": "string"
+                },
+                "light_available": {
+                    "description": "light_available",
+                    "type": "string"
+                },
+                "football_available": {
+                    "description": "football_available",
+                    "type": "string"
+                },
+                "subtitle": {
+                    "description": "subtitle",
+                    "type": "string"
+                }
+            }
+        },
+        "playgrounds/rating": {
+            "required": [
+                "pg_id,user_id,value"
+            ],
+            "properties": {
+                "pg_id": {
+                    "description": "Playground ID",
+                    "type": "integer"
+                },
+                "user_id": {
+                    "description": "User ID",
+                    "type": "integer"
+                },
+                "value": {
+                    "description": "Rating value",
+                    "type": "integer"
+                }
+            }
+        },
+        "playgrounds/nearby": {
+            "required": [
+                "lat,lng"
+            ],
+            "properties": {
+                "lat": {
+                    "description": "Latitude",
+                    "type": "integer"
+                },
+                "lng": {
+                    "description": "Longitude",
+                    "type": "integer"
+                }
+            }
+        },
+        "prizes": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "img_unachieved": {
+                    "description": "img_achieved",
+                    "type": "string"
+                },
+                "points": {
+                    "description": "points",
+                    "type": "string"
+                }
+            }
+        },
+        "reservations": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "pg_id": {
+                    "description": "pg_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "time_id": {
+                    "description": "time_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "player_id": {
+                    "description": "player_id",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "reservations/attendance": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "attendance": {
+                    "description": "attendance integer value 0 or 1",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "reservations/confirm": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "confirm": {
+                    "description": "confirm integer value 0 or 1",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "reservations/cancel": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "string"
+                },
+                "time_id": {
+                    "description": "the PG time id",
+                    "type": "string"
+                }
+            }
+        },
+        "search": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "pg_name": {
+                    "description": "Play ground ID",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "address": {
+                    "description": "Address, city, area",
+                    "type": "string",
+                    "format": "varchar"
+                },
+                "rating": {
+                    "description": "play ground rating",
+                    "type": "string",
+                    "format": "varchar"
+                },
+                "date_from": {
+                    "description": "Available from date",
+                    "type": "date",
+                    "format": "Y-m-d"
+                },
+                "date_to": {
+                    "description": "Available to date",
+                    "type": "date",
+                    "format": "Y-m-d"
+                }
+            }
+        },
+        "settings": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "key": {
+                    "description": "key",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "description",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "value",
+                    "type": "string"
+                },
+                "field": {
+                    "description": "field",
+                    "type": "string"
+                },
+                "active": {
+                    "description": "active",
+                    "type": "boolean"
+                }
+            }
+        },
+        "statistics": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "visitors": {
+                    "description": "visitors",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "booked_fields": {
+                    "description": "booked_fields",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "fields_added": {
+                    "description": "fields_added",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "teams": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                }
+            }
+        },
+        "users": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "mobile": {
+                    "description": "mobile",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "city",
+                    "type": "string"
+                },
+                "area": {
+                    "description": "area",
+                    "type": "string"
+                },
+                "pg_type": {
+                    "description": "pg_type",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "player or pg_owner",
+                    "type": "string"
+                },
+                "team": {
+                    "description": "forien key for team id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "likes": {
+                    "description": "number of likes",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "birth_date": {
+                    "description": "User birth date. Ex (2017-05-02)",
+                    "type": "string",
+                    "format": "date"
+                },
+                "map_lon": {
+                    "description": "map_lon",
+                    "type": "number",
+                    "format": "float"
+                },
+                "map_lat": {
+                    "description": "map_lat",
+                    "type": "number",
+                    "format": "float"
+                },
+                "email": {
+                    "description": "email",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "password",
+                    "type": "string"
+                },
+                "remember_token": {
+                    "description": "remember_token",
+                    "type": "string"
+                },
+                "api_token": {
+                    "description": "api_token",
+                    "type": "string"
+                },
+                "test": {
+                    "description": "for testing purpose so no SMS will send and the confirmation  code is (1234)",
+                    "type": "string"
+                }
+            }
+        },
+        "login": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "mobile": {
+                    "description": "mobile",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "email",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "password",
+                    "type": "string"
+                }
+            }
+        },
+        "confirm": {
+            "required": [
+                "user_id, code"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "user id",
+                    "type": "string"
+                },
+                "code": {
+                    "description": "confirmation  code",
+                    "type": "string"
+                }
+            }
+        },
+        "logout": {
+            "required": [
+                "user_id, code"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "user id",
+                    "type": "string"
+                }
+            }
+        },
+        "resend-code": {
+            "required": [
+                "user_id"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "user id",
+                    "type": "string"
+                },
+                "test": {
+                    "description": "for testing purpose so no SMS will send and the confirmation  code is (1234)",
+                    "type": "string"
+                }
+            }
+        },
+        "forget-password": {
+            "required": [
+                "mobile"
+            ],
+            "properties": {
+                "mobile": {
+                    "description": "Valid user mobile",
+                    "type": "string"
+                },
+                "test": {
+                    "description": "for testing purpose so no SMS will send and the new password will be in the response.",
+                    "type": "string"
+                }
+            }
+        },
+        "change-password": {
+            "required": [
+                "user_id"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "The user id",
+                    "type": "string"
+                },
+                "old_password": {
+                    "description": "",
+                    "type": "string"
+                },
+                "new_password": {
+                    "description": "",
+                    "type": "string"
+                }
+            }
+        },
+        "fb-login": {
+            "required": [
+                "FB user ID"
+            ],
+            "properties": {
+                "fb_user_id": {
+                    "description": "Facebook email",
+                    "type": "string"
+                },
+                "mobile": {
+                    "description": "User mobile number in case creating a new user",
+                    "type": "string"
+                },
+                "image": {
+                    "description": "Facebook image url",
+                    "type": "string"
+                },
+                "test": {
+                    "description": "for testing purpose so no SMS will send and the confirmation  code is (1234)",
+                    "type": "string"
+                }
+            }
+        },
+        "profile": {
+            "required": [
+                "user_id"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "User ID",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "User name",
+                    "type": "string"
+                },
+                "mobile": {
+                    "description": "User mobile.",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "User city.",
+                    "type": "string"
+                },
+                "team": {
+                    "description": "User team.",
+                    "type": "string"
+                },
+                "birth_date": {
+                    "description": "User birth date. Ex (2017-05-02)",
+                    "type": "date"
+                },
+                "map_lon": {
+                    "description": "User location longitude.",
+                    "type": "string"
+                },
+                "map_lat": {
+                    "description": "User location latitude.",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "User password if you need to update.",
+                    "type": "string"
+                },
+                "image": {
+                    "description": "User profile image in base64 formate.",
+                    "type": "string"
+                },
+                "snap_chat": {
+                    "description": "user snap chat",
+                    "type": "string"
+                }
+            }
+        },
+        "points": {
+            "required": [
+                "user_id",
+                "points"
+            ],
+            "properties": {
+                "user_id": {
+                    "description": "The user id",
+                    "type": "string"
+                },
+                "points": {
+                    "description": "The user id points",
+                    "type": "int"
+                }
+            }
+        }
+    }
+}
